@@ -3,7 +3,7 @@ entries:
   falco:
   - apiVersion: v2
     appVersion: 0.30.0
-    created: "2021-12-28T12:39:57.752209+05:30"
+    created: "2022-01-03T15:58:34.03391+05:30"
     dependencies:
     - condition: falcosidekick.enabled
       name: falcosidekick
@@ -29,4 +29,4 @@ entries:
     urls:
     - charts/falco-1.16.2.tgz
     version: 1.16.2
-generated: "2021-12-28T12:39:57.748407+05:30"
+generated: "2022-01-03T15:58:34.028854+05:30"
