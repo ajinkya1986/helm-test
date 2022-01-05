@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   cloudanix-container-protection:
   - apiVersion: v2
-    created: "2022-01-05T11:51:28.427044+05:30"
+    created: "2022-01-05T12:22:16.904875+05:30"
     dependencies:
     - name: falco
       repository: https://falcosecurity.github.io/charts
@@ -14,4 +14,4 @@ entries:
     urls:
     - cloudanix-container-protection-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-05T11:51:28.421105+05:30"
+generated: "2022-01-05T12:22:16.898275+05:30"
