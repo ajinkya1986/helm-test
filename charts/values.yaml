@@ -1,0 +1,46 @@
+# Default values for chart.
+customerID: 123
+clusterID: 456
+
+
+falcoSidekick:
+  name: falco-sidekick
+  cloudanixUrl: https://9520-210-16-94-133.ngrok.io/threats
+  replicaCount: 2
+  image: falco-sidekick
+  configMapName: falco-sidekick-cm
+  bufferSize: 200
+  labels:
+    app: falco-sidekick
+
+cloudanixInformer:
+  name: cloudanix-informer
+  cloudanixUrl: https://9520-210-16-94-133.ngrok.io/inventory
+  image: cloudanix-informer
+  configMapName: cloudanix-informer-cm
+  serviceAccount: cloudanix-informer-sa
+  clusterRole: cloudanix-informer-role
+  bufferSize: 200
+  labels:
+    app: cloudanix-informer
+
+configCron:
+  name: config-cron
+  image: config-cron
+  configMapName: config-cron-cm
+  configURL: https://9520-210-16-94-133.ngrok.io/config
+
+falco: 
+  customRules: 
+    cloudanix: |-
+      - macro: open_write
+        condition: (evt.type=open or evt.type=openat) and evt.is_open_write=true and fd.typechar='f' and fd.num>=0
+  falco: 
+    httpOutput: 
+      enabled: true
+      url: "http://falco-sidekick.cloudanix.svc.cluster.local:8080/"
+    jsonOutput: true
+
+falco:
+  ebpf:
+    enabled: true
