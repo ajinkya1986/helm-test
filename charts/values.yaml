@@ -5,7 +5,7 @@ clusterID: 456
 
 falcoSidekick:
   name: falco-sidekick
-  cloudanixUrl: https://f494-210-16-94-133.ngrok.io/threats
+  cloudanixUrl: https://1d0b-210-16-94-133.ngrok.io/threats
   replicaCount: 2
   image: falco-sidekick
   configMapName: falco-sidekick-cm
@@ -15,7 +15,7 @@ falcoSidekick:
 
 cloudanixInformer:
   name: cloudanix-informer
-  cloudanixUrl: https://f494-210-16-94-133.ngrok.io/inventory
+  cloudanixUrl: https://1d0b-210-16-94-133.ngrok.io/inventory
   image: cloudanix-informer
   configMapName: cloudanix-informer-cm
   serviceAccount: cloudanix-informer-sa
@@ -28,7 +28,7 @@ configCron:
   name: config-cron
   image: config-cron
   configMapName: config-cron-cm
-  configURL: https://f494-210-16-94-133.ngrok.io/config
+  configURL: https://1d0b-210-16-94-133.ngrok.io/config
 
 falco: 
   customRules: 
