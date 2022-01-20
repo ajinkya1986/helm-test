@@ -23,8 +23,6 @@ spec:
     spec:
       serviceAccountName: {{ .Values.cloudanixInformer.serviceAccount }}
       automountServiceAccountToken: true
-      imagePullSecrets:
-        - name: registrykey 
       containers:
       - name: cloudanix-informer
         image: {{ .Values.cloudanixInformer.image }}

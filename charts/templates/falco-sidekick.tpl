@@ -21,8 +21,6 @@ spec:
         {{ toYaml . | indent 8 }}
         {{- end }}
     spec:
-      imagePullSecrets:
-        - name: registrykey
       containers:
       - name: falco-sidekick
         image: {{ .Values.falcoSidekick.image }}

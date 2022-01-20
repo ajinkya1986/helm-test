@@ -10,8 +10,6 @@ spec:
       template:
         spec:
           serviceAccountName: config-cron-sa
-          imagePullSecrets:
-            - name: registrykey
           containers:
           - name: config-cron
             image: {{ .Values.configCron.image }}

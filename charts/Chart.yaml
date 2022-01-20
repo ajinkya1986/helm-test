@@ -1,5 +1,5 @@
 apiVersion: v2
-name: cloudanix-container-protection
+name: cloudanix
 description: Helm chart to deploy cloudanix container protection services
 
 # A chart can be either an 'application' or a 'library' chart.
